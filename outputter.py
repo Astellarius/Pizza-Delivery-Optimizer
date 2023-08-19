@@ -6,7 +6,6 @@ class Outputter:
         self._output_deliveries()
     
     def _output_deliveries(self):
-        print("Log: output deliveries")
         with open(self.output_file, "w") as file:
             file.write(str(len(self.deliveries)) + "\n")
 

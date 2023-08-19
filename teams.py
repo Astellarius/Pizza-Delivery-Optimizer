@@ -28,6 +28,15 @@ class Teams:
     def get_total_teams(self):
         return copy.deepcopy(self._total_teams)
 
+    def team_fours(self):
+        return self._size_four_teams
+    
+    def team_threes(self):
+        return self._size_three_teams
+    
+    def team_twos(self):
+        return self._size_two_teams
+
     def get_number_of_teams_of_size(self, size):
         if(size == 2):
             return copy.deepcopy(self._size_two_teams)

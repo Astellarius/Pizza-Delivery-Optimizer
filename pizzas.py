@@ -30,10 +30,3 @@ class Pizzas:
 
     def get_pizza_ids(self) -> list[int]:
         return list(self._pizzas.keys())
-    
-
-def main():
-    pizzas_data = Pizzas(FILE_A_IN)
-    print(pizzas_data.get_pizza_ids())
-
-main()

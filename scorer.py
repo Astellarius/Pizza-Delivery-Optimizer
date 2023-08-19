@@ -22,6 +22,6 @@ def main():
     main_scorer(FILE_B_IN, FILE_B_OUT)
     main_scorer(FILE_C_IN, FILE_C_OUT)
     main_scorer(FILE_D_IN, FILE_D_OUT)
-    main_scorer(FILE_E_IN, FILE_E_OUT)
+    main_scorer(FILE_E_IN, FILE_E_OUT)  # Takes too Long
 
 main()

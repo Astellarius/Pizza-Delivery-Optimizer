@@ -17,7 +17,7 @@ def get_delivery(delivery_size, available_pizzas: list):
     return delivery, available_pizzas
 
 
-def basic_greedy(teams_data, pizzas_data):
+def basic(teams_data, pizzas_data):
     # Output
     deliveries = []
 
