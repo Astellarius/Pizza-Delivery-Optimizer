@@ -1,0 +1,27 @@
+Highscore
+a.in -- score: 49
+b.in -- score: 11 555
+c.in -- score: 706 947 263
+d.in -- score: 7 865 154
+e.in -- score: 10 791 650
+
+2021-04-09
+greedy_alg.cpp a.in -- score: 49
+greedy_alg.cpp b.in -- score: 11 555
+greedy_alg.cpp c.in -- score: 706 947 263
+greedy_alg.cpp d.in -- score: 7 865 154
+greedy_alg.cpp e.in -- score: 10 791 650
+
+2023-08-18
+random_gen.py a.in -- score: 49
+random_gen.py b.in -- score: 3 368
+random_gen.py c.in -- score: 106 584 571
+random_gen.py d.in -- score: 732 250
+random_gen.py e.in -- score: 6 626 804
+
+2023-08-19
+basic.py a.in -- score: 49
+basic.py b.in -- score: 7 524
+basic.py c.in -- score: 202 702 854
+basic.py d.in -- score: 1 466 599
+basic.py e.in -- score: 6 642 962
