@@ -46,9 +46,15 @@ class MakeDeliveryChecker:
         return enough_pizzas and enough_2teams
 
     def can_make_delivery(self, info: DeliveryInfo):
-        self.can_4_delivery = self.can_make_4_delivery(info)
-        self.can_3_delivery = self.can_make_3_delivery(info)
-        self.can_2_delivery = self.can_make_2_delivery(info)
+
+        if self.can_4_delivery == True:
+            self.can_4_delivery = self.can_make_4_delivery(info)
+
+        if self.can_3_delivery == True:
+            self.can_3_delivery = self.can_make_3_delivery(info)
+
+        if self.can_2_delivery == True:
+            self.can_2_delivery = self.can_make_2_delivery(info)
         
         return self.can_4_delivery or self.can_3_delivery or self.can_2_delivery
 
@@ -68,7 +74,8 @@ def one_at_a_time(teams_data, pizzas_data):
     deliveries = []
     
     delivery_info = DeliveryInfo(pizzas_data)
-    delivery_info.sort_available_pizzas()
+    delivery_info.sort_available_pizzas()  # ? 
+
     make_delivery_checker = MakeDeliveryChecker(teams_data, pizzas_data)
 
     while(make_delivery_checker.can_make_delivery(delivery_info)):

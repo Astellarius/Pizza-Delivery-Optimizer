@@ -2,12 +2,9 @@ from delivery_info import DeliveryInfo
 from pizzas import Pizzas
 
 
-
-
 # Given DeliverySize (2-4) and Delivery Info
 # return a delivery of pizza ids 
 def greedy1(delivery_size, info: DeliveryInfo, pizza_info: Pizzas):
-    # print("Calculating Delivery!")
     pizza_ids = []
 
     unique_ingredients = set()
@@ -15,12 +12,14 @@ def greedy1(delivery_size, info: DeliveryInfo, pizza_info: Pizzas):
         most_new_ingredients_count = -1
         most_new_ingredients_pizza_id = -1
 
+        # get best pizza id given pizza_id and unique_toppings_set
         for pizza_id in info.available_pizzas:
-            ingredients = pizza_info.get_pizza(pizza_id)
+            
+            ingredients = pizza_info.get_pizza(pizza_id) # can be improved 
             if most_new_ingredients_count > len(ingredients):
                 break
 
-            this_pizza_ingredients = set(pizza_info.get_pizza(pizza_id))
+            this_pizza_ingredients = set(ingredients)
             set_difference = this_pizza_ingredients - unique_ingredients
             new_possible_ingredients_count = len(set_difference)
 
@@ -38,7 +37,6 @@ def greedy1(delivery_size, info: DeliveryInfo, pizza_info: Pizzas):
         unique_ingredients.add(pizza_info.get_pizza(most_new_ingredients_pizza_id))
         info.available_pizzas.remove(most_new_ingredients_pizza_id)
         
-
     # assemble 
     delivery = [] # Team Size, Pizza Id's 
     delivery.append(delivery_size)
