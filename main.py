@@ -21,10 +21,10 @@ def algorithm(input_file, output_file):
     print("Done")
 
 def main():
-    algorithm(FILE_A_IN, FILE_A_OUT)
-    algorithm(FILE_B_IN, FILE_B_OUT)
-    algorithm(FILE_C_IN, FILE_C_OUT)
+    # algorithm(FILE_A_IN, FILE_A_OUT)
+    # algorithm(FILE_B_IN, FILE_B_OUT)
+    # algorithm(FILE_C_IN, FILE_C_OUT)
     algorithm(FILE_D_IN, FILE_D_OUT)
-    algorithm(FILE_E_IN, FILE_E_OUT)
+    # algorithm(FILE_E_IN, FILE_E_OUT)
 
 main()
