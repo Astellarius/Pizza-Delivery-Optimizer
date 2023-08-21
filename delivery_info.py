@@ -2,6 +2,7 @@ from pizzas import Pizzas
 
 class DeliveryInfo:
     def __init__(self, pizzas_data: Pizzas):
+        self.pizzas_data = pizzas_data
         self.pizzas_assigned = 0
         self.available_pizzas = pizzas_data.get_pizza_ids()
 
@@ -22,3 +23,6 @@ class DeliveryInfo:
         else:
             print("Log: increase_team_served got team size other than 2,3,4")
             exit()
+
+    def sort_available_pizzas(self):
+        self.available_pizzas = sorted(self.available_pizzas, key=lambda x: self.pizzas_data.get_pizza(x), reverse=True)

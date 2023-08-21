@@ -18,6 +18,7 @@ def algorithm(input_file, output_file):
 
     # Output Deliveries
     output_deliveries = Outputter(deliveries, output_file)
+    print("Done")
 
 def main():
     algorithm(FILE_A_IN, FILE_A_OUT)

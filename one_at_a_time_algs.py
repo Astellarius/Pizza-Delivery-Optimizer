@@ -14,7 +14,10 @@
 from teams import Teams 
 from pizzas import Pizzas
 from delivery_info import DeliveryInfo
+
+# Algos 
 from basic3 import basic
+from greedy1 import greedy1
 
 
 class MakeDeliveryChecker:
@@ -65,13 +68,14 @@ def one_at_a_time(teams_data, pizzas_data):
     deliveries = []
     
     delivery_info = DeliveryInfo(pizzas_data)
+    delivery_info.sort_available_pizzas()
     make_delivery_checker = MakeDeliveryChecker(teams_data, pizzas_data)
 
     while(make_delivery_checker.can_make_delivery(delivery_info)):
         delivery_size = make_delivery_checker.make_delivery_size()
 
         """ Change Algorithms Here """
-        delivery = basic(delivery_size, delivery_info)
+        delivery = greedy1(delivery_size, delivery_info, pizzas_data)
         deliveries.append(delivery)
 
         # Make sure to update delivery_info!
