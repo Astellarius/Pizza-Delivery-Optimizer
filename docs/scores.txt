@@ -32,3 +32,24 @@ greedy1.py b.in -- score: 3 462
 greedy1.py c.in -- score: 224 319 808
 greedy1.py d.in -- score: 1 185 835
 greedy1.py e.in -- score: 4 896 992
+
+2023-08-20
+greedy1.py a.in -- score: 49
+greedy1.py b.in -- score: 6 729
+greedy1.py c.in -- score: 220 906 927
+greedy1.py d.in -- score: 2 139 617
+greedy1.py e.in -- score: 7 325 842
+
+2023-08-20
+greedy1_5.py a.in -- score: 49
+greedy1_5.py b.in -- score: 5 612
+greedy1_5.py c.in -- score: 686 663 538
+greedy1_5.py d.in -- score: 5 852 236
+greedy1_5.py e.in -- score: 8 317 908
+
+2023-08-21
+greedy2.py a.in -- score: 49
+greedy2.py b.in -- score: 11 556
+greedy2.py c.in -- score: 706 624 573
+greedy2.py d.in -- score: 7 863 102
+greedy2.py e.in -- score: 10 789 627

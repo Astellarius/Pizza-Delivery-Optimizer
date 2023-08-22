@@ -18,6 +18,8 @@ from delivery_info import DeliveryInfo
 # Algos 
 from basic3 import basic
 from greedy1 import greedy1
+from greedy1_5 import greedy1_5
+from greedy2 import greedy2
 
 
 class MakeDeliveryChecker:
@@ -82,7 +84,7 @@ def one_at_a_time(teams_data, pizzas_data):
         delivery_size = make_delivery_checker.make_delivery_size()
 
         """ Change Algorithms Here """
-        delivery = greedy1(delivery_size, delivery_info, pizzas_data)
+        delivery = greedy2(delivery_size, delivery_info, pizzas_data)
         deliveries.append(delivery)
 
         # Make sure to update delivery_info!

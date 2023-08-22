@@ -5,20 +5,10 @@ class DeliveryInfo:
         self.pizzas_data = pizzas_data
         self.pizzas_assigned = 0
         self.available_pizzas = pizzas_data.get_pizza_ids()
-        self.available_pizzas2 = self.make_ava2()
 
         self.team_2_served = 0
         self.team_3_served = 0
         self.team_4_served = 0 
-    
-    def make_ava2(self):
-        my_dic = dict()
-
-        for pizza in self.available_pizzas:
-            my_dic[pizza] = True 
-        
-        return my_dic 
-
 
     def increase_team_served(self, team_size):
         if team_size == 4:
@@ -35,4 +25,4 @@ class DeliveryInfo:
             exit()
 
     def sort_available_pizzas(self):
-        self.available_pizzas = sorted(self.available_pizzas, key=lambda x: self.pizzas_data.get_pizza(x), reverse=True)
+        self.available_pizzas = sorted(self.available_pizzas, key=lambda x: len(self.pizzas_data.get_pizza(x)), reverse=True)
