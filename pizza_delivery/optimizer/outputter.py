@@ -3,9 +3,7 @@ class Outputter:
         self.deliveries = deliveries
         self.output_file = output_file
 
-        self._output_deliveries()
-    
-    def _output_deliveries(self):
+    def output_deliveries(self):
         with open(self.output_file, "w") as file:
             file.write(str(len(self.deliveries)) + "\n")
 

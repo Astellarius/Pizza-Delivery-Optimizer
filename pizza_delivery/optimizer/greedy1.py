@@ -1,5 +1,5 @@
-from delivery_info import DeliveryInfo
-from pizzas import Pizzas
+from pizza_delivery.optimizer.delivery_info import DeliveryInfo
+from pizza_delivery.pizzas import Pizzas
 
 
 # Given DeliverySize (2-4) and Delivery Info

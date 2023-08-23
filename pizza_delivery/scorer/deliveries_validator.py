@@ -13,8 +13,8 @@ Example
         ... 
 """
 
-from deliveries import Deliveries, Delivery
-from teams import Teams
+from scorer.deliveries import Deliveries, Delivery
+from info.teams import Teams
 
 
 class Deliveries_Validator:

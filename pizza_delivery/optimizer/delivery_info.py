@@ -1,4 +1,4 @@
-from pizzas import Pizzas
+from info.pizzas import Pizzas
 
 class DeliveryInfo:
     def __init__(self, pizzas_data: Pizzas):

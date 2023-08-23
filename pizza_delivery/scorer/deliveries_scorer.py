@@ -12,8 +12,8 @@ Example
     print(deliveries_score)
 """
 
-from deliveries import Deliveries, Delivery
-from pizzas import Pizzas
+from scorer.deliveries import Deliveries, Delivery
+from info.pizzas import Pizzas
 
 
 class Deliveries_Scorer:

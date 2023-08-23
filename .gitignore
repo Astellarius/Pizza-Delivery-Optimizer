@@ -1,0 +1,32 @@
+# Testing 
+/.pytest_cache
+
+# Data Science 
+.ipynb_checkpoints/
+
+# Byte-compiled / optimized files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Python 3.7+ virtual environment
+__pypackages__/
+
+# Local development environment
+.env
+
+# IDE-specific files and directories (e.g., for VSCode)
+.vscode/
+.idea/
+*.code-workspace
+
+# Dependency directories (if not using a virtual environment)
+# You can uncomment the following lines if needed
+# venv/
+# env/
+# env-bak/
+
+# OS-specific files
+.DS_Store
+Thumbs.db

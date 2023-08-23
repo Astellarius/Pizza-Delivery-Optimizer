@@ -1,5 +1,5 @@
 from collections import defaultdict
-from globals import *
+
 
 class Pizzas: 
     def __init__(self, filename):
@@ -47,9 +47,6 @@ class Pizzas:
                 pizza_toppings_ints.append(pizza_topping_int)
 
             self._pizzas[pizza_id] = tuple(pizza_toppings_ints)
-
-
-
 
     # External Methods 
     def get_total_pizzas(self) -> int:

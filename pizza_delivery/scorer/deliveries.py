@@ -1,8 +1,3 @@
-from pizzas import Pizzas
-from teams import Teams
-from globals import *
-
-
 class Delivery: 
     def __init__(self, team_size: int, pizza_ids: list[int]):
         self.team_size: int = team_size

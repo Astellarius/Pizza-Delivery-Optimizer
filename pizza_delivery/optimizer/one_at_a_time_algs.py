@@ -11,15 +11,15 @@
     Create objects to contain data. 
 
 """
-from teams import Teams 
-from pizzas import Pizzas
-from delivery_info import DeliveryInfo
+from info.teams import Teams 
+from info.pizzas import Pizzas
+from optimizer.delivery_info import DeliveryInfo
 
 # Algos 
-from basic3 import basic
-from greedy1 import greedy1
-from greedy1_5 import greedy1_5
-from greedy2 import greedy2
+# from basic3 import basic
+# from greedy1 import greedy1
+# from greedy1_5 import greedy1_5
+from optimizer.greedy2 import greedy2
 
 
 class MakeDeliveryChecker:

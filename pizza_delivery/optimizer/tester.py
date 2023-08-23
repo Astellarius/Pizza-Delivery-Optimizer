@@ -1,9 +1,9 @@
 # find the maximum number of ingredients per file 
 
-from globals import *
-from teams import Teams 
-from pizzas import Pizzas
-from outputter import Outputter
+from pizza_delivery.optimizer.globals import *
+from pizza_delivery.teams import Teams 
+from pizza_delivery.pizzas import Pizzas
+from pizza_delivery.pizza_delivery_optimizer.outputter import Outputter
 
 # Algorithms 
 from random_gen import random_gen

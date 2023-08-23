@@ -1,4 +1,4 @@
-from delivery_info import DeliveryInfo
+from pizza_delivery.optimizer.delivery_info import DeliveryInfo
 
 def basic(delivery_size, info: DeliveryInfo):
     pizza_ids = []
