@@ -1,28 +1,14 @@
-""" Problems with Basic 
-
-1. DeliveryPossibility
-    The possibility to make a Delivery took up a large chunk of code. 
-    This logic is not really specific to basic. 
-    Should Separate these two. 
-
-2. Floating Variables 
-    There are many variables that need to be changed and moved around. 
-    This will become challenging as later we will need more function helpers. 
-    Create objects to contain data. 
-
-"""
 from info.teams import Teams 
 from info.pizzas import Pizzas
 from optimizer.delivery_info import DeliveryInfo
 
-# Algos 
-# from basic3 import basic
-# from greedy1 import greedy1
-# from greedy1_5 import greedy1_5
+# Algorithms
 from optimizer.greedy2 import greedy2
 
 
 class MakeDeliveryChecker:
+    """ Checks to see if it possible to make a Delivery. """
+
     def __init__(self, teams_data: Teams, pizzas_data: Pizzas):
         self.teams = teams_data
         self.pizzas = pizzas_data
@@ -73,6 +59,8 @@ class MakeDeliveryChecker:
 
 
 def one_at_a_time(teams_data, pizzas_data):
+    """ Generates deliveries by generating a Delivery one at a time. """
+
     deliveries = []
     
     delivery_info = DeliveryInfo(pizzas_data)

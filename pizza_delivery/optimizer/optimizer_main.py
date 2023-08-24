@@ -6,10 +6,9 @@ from optimizer.outputter import Outputter
 from optimizer.one_at_a_time_algs import one_at_a_time
 
 
-
-
-
 def run_optimizer(input_file, output_file):
+    """ Given a problem input file, produces an output file with a deliveries solution. """
+
     # Process Inputs 
     teams_data = Teams(input_file)
     pizzas_data = Pizzas(input_file)
@@ -21,13 +20,3 @@ def run_optimizer(input_file, output_file):
     output_deliveries = Outputter(deliveries, output_file)
     output_deliveries.output_deliveries()
     print("Done")
-
-def run_optimizers():
-    run_optimizer(FILE_A_IN, FILE_A_OUT)
-    run_optimizer(FILE_B_IN, FILE_B_OUT)
-    run_optimizer(FILE_C_IN, FILE_C_OUT)
-    run_optimizer(FILE_D_IN, FILE_D_OUT)
-    # run_optimizer(FILE_E_IN, FILE_E_OUT)
-
-
-# main()

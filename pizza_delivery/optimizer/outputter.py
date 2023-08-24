@@ -1,4 +1,6 @@
 class Outputter:
+    """ The Outputter class writes the deliveries to a text file. """
+
     def __init__(self, deliveries, output_file):
         self.deliveries = deliveries
         self.output_file = output_file

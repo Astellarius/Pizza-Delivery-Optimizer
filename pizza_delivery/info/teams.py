@@ -2,6 +2,8 @@ import copy
 
 
 class Teams: 
+    """ Keeps the Teams data given in the Problem Input. """
+
     def __init__(self, input_file):
         self._total_teams = 0
         self._size_two_teams = 0
@@ -26,7 +28,7 @@ class Teams:
 
     # External Methods 
     def get_total_teams(self):
-        return copy.deepcopy(self._total_teams)
+        return self._total_teams
 
     def team_fours(self):
         return self._size_four_teams

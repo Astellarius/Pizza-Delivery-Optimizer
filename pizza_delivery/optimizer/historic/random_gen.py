@@ -3,7 +3,7 @@ from pizza_delivery.pizzas import Pizzas
 from pizza_delivery.pizza_delivery_optimizer.outputter import Outputter
 
 import random
-from pizza_delivery.optimizer.globals import *
+# from pizza_delivery.optimizer.globals import *
 
 """ generate deliveries randomly
     are there 4 team's 

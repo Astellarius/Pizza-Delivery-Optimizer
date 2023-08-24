@@ -1,6 +1,8 @@
 from info.pizzas import Pizzas
 
 class DeliveryInfo:
+    """ DeliveryInfo keeps track of the Deliveries metadata as they are being produced. """
+
     def __init__(self, pizzas_data: Pizzas):
         self.pizzas_data = pizzas_data
         self.pizzas_assigned = 0
