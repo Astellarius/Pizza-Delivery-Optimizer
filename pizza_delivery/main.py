@@ -1,5 +1,7 @@
 from optimizer import optimizer_main 
-from scorer import scorer_main
+from validate import deliveries_validator
+from score import deliveries_scorer
+
 
 FILE_A_IN = "inputs/a.in"
 FILE_B_IN = "inputs/b.in"
@@ -13,18 +15,28 @@ FILE_C_OUT = "outputs/c.txt"
 FILE_D_OUT = "outputs/d.txt"
 FILE_E_OUT = "outputs/e.txt"
 
-def main():
-    optimizer_main.run_optimizer(FILE_A_IN, FILE_A_OUT)
-    optimizer_main.run_optimizer(FILE_B_IN, FILE_B_OUT)
-    optimizer_main.run_optimizer(FILE_C_IN, FILE_C_OUT)
-    optimizer_main.run_optimizer(FILE_D_IN, FILE_D_OUT)
-    # optimizer_main.run_optimizer(FILE_E_IN, FILE_E_OUT) # May take over 5 minutes.
 
-    scorer_main.main_scorer(FILE_A_IN, FILE_A_OUT)
-    scorer_main.main_scorer(FILE_B_IN, FILE_B_OUT)
-    scorer_main.main_scorer(FILE_C_IN, FILE_C_OUT)
-    scorer_main.main_scorer(FILE_D_IN, FILE_D_OUT)
-    scorer_main.main_scorer(FILE_E_IN, FILE_E_OUT)
+def run_validate_score(file_in, file_out):
+    
+    optimizer_main.run_optimizer(file_in, file_out)
+
+    if deliveries_validator.validate_deliveries(file_in, file_out):
+        print("File Validated")
+
+        scorer = deliveries_scorer.Scorer(file_in, file_out)
+        deliveries_score = scorer.score_deliveries()
+        print("File Score: ", deliveries_score)
+
+    else:
+        print("File Not Validated")
+
+
+def main():
+    run_validate_score(FILE_A_IN, FILE_A_OUT)
+    run_validate_score(FILE_B_IN, FILE_B_OUT)
+    run_validate_score(FILE_C_IN, FILE_C_OUT)
+    run_validate_score(FILE_D_IN, FILE_D_OUT)
+    # run_validate_score(FILE_E_IN, FILE_E_OUT)
 
 
 main()

@@ -13,15 +13,21 @@ Example
         ... 
 """
 
-from scorer.deliveries import Deliveries, Delivery
+from score.deliveries import Deliveries, Delivery
 from info.teams import Teams
 
 
-class Deliveries_Validator:
+def validate_deliveries(input_data_file, deliveries_file):
+    # deliveries = Deliveries(deliveries_file)
+    # teams = Teams(input_data_file)
+    deliveries_validator = Deliveries_Validator(deliveries_file, input_data_file)
+    return deliveries_validator.is_deliveries_valid()
 
-    def __init__(self, deliveries_data: Deliveries, teams_data: Teams):
-        self._deliveries: list[Delivery] = deliveries_data.deliveries
-        self._teams_data: Teams = teams_data
+
+class Deliveries_Validator:
+    def __init__(self, deliveries_file, input_data_file):
+        self._deliveries_data = Deliveries(deliveries_file)
+        self._teams_data = Teams(input_data_file)
         
     def is_deliveries_valid(self) -> bool:
         check_1_passed = self.check_1()
@@ -29,7 +35,6 @@ class Deliveries_Validator:
         check_3_passed = self.check_3()
 
         return check_1_passed and check_2_passed and check_3_passed
-
 
     def check_1(self):
         """Check 1: Each pizza must be part of at most one order
@@ -40,7 +45,7 @@ class Deliveries_Validator:
 
         seen_pizza_ids = set()
 
-        for delivery in self._deliveries:
+        for delivery in self._deliveries_data.deliveries:
             for pizza_id in delivery.pizza_ids:
                 if pizza_id in seen_pizza_ids:
                     return False 
@@ -56,7 +61,7 @@ class Deliveries_Validator:
             Space Complexity O(1)
         """
 
-        for delivery in self._deliveries:
+        for delivery in self._deliveries_data.deliveries:
             if delivery.team_size != len(delivery.pizza_ids):
                 return False
 
@@ -76,7 +81,7 @@ class Deliveries_Validator:
         delivery_team_size_threes = 0
         delivery_team_size_twos = 0
 
-        for delivery in self._deliveries:
+        for delivery in self._deliveries_data.deliveries:
             if delivery.team_size == 4:
                 delivery_team_size_fours += 1
             
